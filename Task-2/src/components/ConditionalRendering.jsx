@@ -1,7 +1,7 @@
 import "./ConditionalRendering.css";
 
 function ConditionalRendering() {
-  const isLoggedIn = true;
+  const isLoggedIn = false;
 
   return (
     <div className="container">

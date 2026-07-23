@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ececec;
+}
+
+.container {
+  width: 90%;
+  margin: 20px auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.counter {
+  background: white;
+  padding: 20px;
+  border: 1px solid #999;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.counter h2 {
+  margin-bottom: 15px;
+}
+
+.counter h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.btns {
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.inc {
+  background-color: green;
+}
+
+.dec {
+  background-color: red;
+}
+
+.reset {
+  background-color: gray;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 250px;
+  background: white;
+  border: 1px solid gray;
+  padding: 15px;
+}
+
+.card h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin: 8px 0;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 150px;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .card {
+    width: 90%;
+  }
+}

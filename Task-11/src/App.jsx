@@ -1,28 +1,28 @@
-import React, { useState, useEffect, useRef, useContext } from "react";
-import "./App.css";
+import React, { useState, useEffect, useRef, useContext } from "react"
+import "./App.css"
 
-const UserContext = React.createContext();
+const UserContext = React.createContext()
 
 function App() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
 
-  const [submittedName, setSubmittedName] = useState("");
-  const [submittedEmail, setSubmittedEmail] = useState("");
+  const [submittedName, setSubmittedName] = useState("")
+  const [submittedEmail, setSubmittedEmail] = useState("")
 
-  const nameRef = useRef();
+  const nameRef = useRef()
 
   useEffect(() => {
-    console.log("Welcome User");
-    nameRef.current.focus();
-  }, []);
+    console.log("Welcome User")
+    nameRef.current.focus()
+  }, [])
 
   const submit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    setSubmittedName(name);
-    setSubmittedEmail(email);
-  };
+    setSubmittedName(name)
+    setSubmittedEmail(email)
+  }
 
   return (
     <UserContext.Provider value="Welcome to User Profile">
@@ -50,7 +50,7 @@ function Profile({
   submittedName,
   submittedEmail,
 }) {
-  const message = useContext(UserContext);
+  const message = useContext(UserContext)
 
   return (
     <div className="container">
@@ -90,4 +90,4 @@ function Profile({
   );
 }
 
-export default App;
+export default App

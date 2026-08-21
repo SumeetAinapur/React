@@ -3,8 +3,9 @@ import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import Products from "./pages/Products"
-import Contact from "./pages/Contact"
 import Category from "./pages/Category"
+import Contact from "./pages/Contact"
+import NotFound from "./pages/NotFound"
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         </Route>
 
         <Route path="/contact" element={<Contact />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   )

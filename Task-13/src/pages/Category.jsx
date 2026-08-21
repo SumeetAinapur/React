@@ -44,8 +44,11 @@ const localProducts = {
 
 function Category() {
   const { category } = useParams()
+
   const [searchParams] = useSearchParams()
+
   const search = searchParams.get("search")?.toLowerCase() || ""
+
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
@@ -57,7 +60,9 @@ function Category() {
 
       try {
         if (category === "laptops") {
-          const response = await fetch("https://dummyjson.com/products/category/laptops")
+          const response = await fetch(
+            "https://dummyjson.com/products/category/laptops"
+          )
 
           if (!response.ok) {
             throw new Error("Failed to fetch products")
@@ -68,7 +73,9 @@ function Category() {
           const laptopProducts = data.products.map(product => ({
             id: product.id,
             name: product.title,
-            price: `₹${Math.round(product.price * 85).toLocaleString("en-IN")}`,
+            price: `₹${Math.round(
+              product.price * 85
+            ).toLocaleString("en-IN")}`,
             image: product.thumbnail,
             description: product.description
           }))

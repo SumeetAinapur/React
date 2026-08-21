@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3eee6;
+  color: #29251f
+}
+
+/* Navbar */
+
+.navbar {
+  height: 75px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f3eee6;
+  border-bottom: 1px solid #d8d0c4
+}
+
+.navbar h2 {
+  font-size: 26px;
+  letter-spacing: 2px
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px
+}
+
+.nav-links a {
+  color: #5f584e;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #c56b35
+}
+
+/* Home */
+
+.home {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  align-items: center;
+  padding: 60px 10%;
+  background: #e7ddd0
+}
+
+.hero-content {
+  max-width: 600px
+}
+
+.small-title {
+  color: #c56b35;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 18px
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  line-height: 1.05;
+  margin-bottom: 25px
+}
+
+.hero-content > p:not(.small-title) {
+  color: #6c655c;
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 30px
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 13px 24px;
+  background: #c56b35;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.3s
+}
+
+.hero-button:hover {
+  background: #9f5127;
+  transform: translateY(-2px)
+}
+
+/* Products */
+
+.products-page {
+  padding: 60px 8%
+}
+
+.products-page h1 {
+  font-size: 42px;
+  margin-bottom: 25px
+}
+
+/* Search */
+
+.search-box {
+  margin-bottom: 25px
+}
+
+.search-box input {
+  width: 300px;
+  padding: 13px 16px;
+  border: 1px solid #c9bcae;
+  border-radius: 25px;
+  outline: none;
+  background: #fffaf4;
+  font-size: 14px
+}
+
+.search-box input:focus {
+  border-color: #c56b35
+}
+
+/* Categories */
+
+.category-links {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 35px
+}
+
+.category-links a {
+  padding: 11px 22px;
+  border: 1px solid #c9bcae;
+  color: #4e473e;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s
+}
+
+.category-links a:hover {
+  background: #29251f;
+  color: white;
+  border-color: #29251f
+}
+
+/* Cards */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px
+}
+
+.product-card {
+  background: #fffaf4;
+  border: 1px solid #ddd2c5;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s
+}
+
+.product-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 30px rgba(70, 55, 40, 0.12)
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover
+}
+
+.card-content {
+  padding: 22px
+}
+
+.card-content h3 {
+  font-size: 21px;
+  margin-bottom: 8px
+}
+
+.card-content h4 {
+  color: #c56b35;
+  font-size: 18px;
+  margin-bottom: 12px
+}
+
+.card-content p {
+  color: #71695f;
+  line-height: 1.5;
+  margin-bottom: 20px
+}
+
+.card-content button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 5px;
+  background: #29251f;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s
+}
+
+.card-content button:hover {
+  background: #c56b35
+}
+
+/* Message */
+
+.message {
+  padding: 50px;
+  text-align: center;
+  color: #6c655c
+}
+
+/* Contact */
+
+.contact-page {
+  min-height: calc(100vh - 75px);
+  padding: 90px 10%;
+  background: #e7ddd0
+}
+
+.contact-page h1 {
+  font-size: 50px;
+  margin-bottom: 20px
+}
+
+.contact-page > p:not(.small-title) {
+  color: #6c655c;
+  max-width: 500px;
+  line-height: 1.7
+}
+
+.contact-box {
+  margin-top: 30px;
+  padding: 25px;
+  width: 350px;
+  background: #fffaf4;
+  border-left: 4px solid #c56b35
+}
+
+.contact-box p {
+  margin-bottom: 8px
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 5%
+  }
+
+  .nav-links {
+    gap: 15px
+  }
+
+  .hero-content h1 {
+    font-size: 43px
+  }
+
+  .products-page {
+    padding: 40px 5%
+  }
+
+  .products-page h1 {
+    font-size: 32px
+  }
+
+  .category-links {
+    flex-wrap: wrap
+  }
+
+  .search-box input {
+    width: 100%
+  }
+
+  .contact-page {
+    padding: 60px 8%
+  }
+
+  .contact-page h1 {
+    font-size: 40px
+  }
+
+  .contact-box {
+    width: 100%
+  }
+}
